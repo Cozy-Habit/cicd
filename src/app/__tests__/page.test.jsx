@@ -4,7 +4,7 @@ import Page from '../page';
 
 describe('Page', () => {
   it('renders a heading', () => {
-    render(<Page );
+    render(<Page />);
 
     const heading = screen.getByText('Save and see your changes instantly.');
 

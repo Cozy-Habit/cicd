@@ -9,12 +9,9 @@
     "lint": "next lint",
     "test": "jest",
     "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "prepare": "husky"
   },
-  "husky": {
-    "hooks":{
-    "pre-commit": "npm run test"
-  }},
   "dependencies": {
     "next": "15.1.7",
     "react": "^19.0.0",
