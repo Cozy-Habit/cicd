@@ -12,6 +12,7 @@ jobs:
       - name: Run Linter
         run: npm run lint
   test:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,7 +22,7 @@ jobs:
       - name: Run Jest tests
         run: npm run test
   build:
-    needs: [test, lint]
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
