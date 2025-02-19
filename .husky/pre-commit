@@ -1,2 +1,2 @@
-npm run format:fix
+npx lint-staged --verbose --concurrent false --relative
 npm run test
