@@ -1,0 +1,14 @@
+name: Build and publish image to Docker Hub
+on: [workflow_dispatch]
+jobs:
+  publish_image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Build image
+        run: docker build . -t cozyhabit/test:latest
+      - name: Push image to docker hub
+        run: |
+          docker login -u cozyhabit -p ${{secrets.DOCKER_HUB_TOKEN}}
+          docker push cozyhabit/test:latest
