@@ -2,6 +2,15 @@ name: CI Pipeline
 on: push
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Node setup and install dependencies
+        uses: ./.github/actions/setup-node/
+      - name: Run Linter
+        run: npm run lint
   test:
     runs-on: ubuntu-latest
     steps:
@@ -12,7 +21,7 @@ jobs:
       - name: Run Jest tests
         run: npm run test
   build:
-    needs: test
+    needs: [test, lint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
