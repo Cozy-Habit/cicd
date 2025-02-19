@@ -1,7 +1,7 @@
 name: Setup Node.js and Install Dependencies
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: Setup Node
       uses: actions/setup-node@v4
