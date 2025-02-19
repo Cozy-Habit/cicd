@@ -40,6 +40,23 @@
     "ts-node": "^10.9.2",
     "typescript": "^5"
   },
+  "bundlemon": {
+    "baseDir": ".",
+    "files": [
+      {
+        "path": "index.html",
+        "maxSize": "2kb",
+        "maxPercentIncrease": 5
+      },
+      {
+        "path": "bundle.<hash>.js",
+        "maxSize": "10kb"
+      },
+      {
+        "path": "assets/**/*.{png,svg}"
+      }
+    ]
+  },
   "lint-staged": {
     "src/**/*.{js,ts,tsx}": [
       "next lint",
