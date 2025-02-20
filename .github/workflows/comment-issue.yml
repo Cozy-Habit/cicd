@@ -8,13 +8,15 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Comment on new issue
         uses: actions/github-script@v7
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const fs = require('fs')
-            const issueBody = fs.readFileSync(".github/misc/comment.md", "utf8")
+            const issueBody = fs.readFileSync("./.github/misc/comment.md", "utf8")
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
