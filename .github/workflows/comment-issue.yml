@@ -5,6 +5,7 @@ on:
       - opened
 jobs:
   comment:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Comment on new issue
