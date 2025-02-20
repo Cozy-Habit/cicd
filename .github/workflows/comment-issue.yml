@@ -13,9 +13,11 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            const fs = require('fs')
+            const issueBody = fs.readFileSync("./.github/misc/comment.md", "utf8")
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: "Hurrayyyyy!!!"
+              body: issueBody
             })
