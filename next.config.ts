@@ -10,16 +10,7 @@ const nextConfig: NextConfig = {
   // it's important to ensure that your application is aware of this base path so that it can generate correct URLs for its assets (JavaScript, CSS, images, etc.) and route navigation
   images: {
     unoptimized: true,
-    path: isProd ? '/cicd' : '',
   },
-  // async rewrites() { //only applies for assets?
-  //   return [
-  //     {
-  //       source: '/cicd/:path*',
-  //       destination: '/:path*',
-  //     },
-  //   ];
-  // },
 };
 
 export default nextConfig;
