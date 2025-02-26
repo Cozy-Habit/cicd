@@ -48,7 +48,10 @@
       }
     ],
     "reportOutput": [
-      "github"
+      "github",
+      {
+        "maxPercentIncrease": 5
+      }
     ]
   },
   "lint-staged": {

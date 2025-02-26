@@ -51,3 +51,7 @@ jobs:
       - name: Deploy to GitHub Pages # This step is skipped if the workflow was triggered by a pull request.
         id: deployment
         uses: actions/deploy-pages@v4
+
+        #/cicd/index.html
+        # requests js/css files -> build system has already prefixed the sources for these optimized files with the basePath hence why it finds it easily
+        # requests images -> build system doesn't care about images which is why the source path is unmodified and we have to tell it manually where to find it

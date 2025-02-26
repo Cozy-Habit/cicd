@@ -9,7 +9,7 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src={`${basePath}/next.svg`}
+          src={`${basePath}/next.svg`} //is this the best practice for assets in the public folder in a subdirectory?
           alt='Next.js logo'
           width={180}
           height={38}
