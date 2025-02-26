@@ -47,10 +47,9 @@
         "path": "./dist/**/*.js"
       }
     ],
-    "reporters": [
+    "reportOutput": [
       "github"
-    ],
-    "ci": true
+    ]
   },
   "lint-staged": {
     "src/**/*.{js,ts,tsx}": [
