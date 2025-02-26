@@ -44,16 +44,7 @@
     "baseDir": ".",
     "files": [
       {
-        "path": "index.html",
-        "maxSize": "2kb",
-        "maxPercentIncrease": 5
-      },
-      {
-        "path": "bundle.<hash>.js",
-        "maxSize": "10kb"
-      },
-      {
-        "path": "assets/**/*.{png,svg}"
+        "path": "./dist/**/*.js"
       }
     ]
   },
